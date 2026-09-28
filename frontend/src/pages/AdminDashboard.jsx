@@ -98,7 +98,7 @@ function AdminDashboard() {
       setError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/purchase-requests"
+        "https://carmarket-backend-966q.onrender.com/api/purchase-requests"
       );
 
       setRequests(response.data.data || []);
@@ -124,7 +124,7 @@ function AdminDashboard() {
       setSellError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/sell-cars"
+        "https://carmarket-backend-966q.onrender.com/api/sell-cars"
       );
 
       setSellRequests(response.data.data || []);
@@ -150,7 +150,7 @@ function AdminDashboard() {
       setCarError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/cars"
+        "https://carmarket-backend-966q.onrender.com/api/cars"
       );
 
       setCars(response.data.data || []);
@@ -248,11 +248,11 @@ function AdminDashboard() {
 
       const response = editingCarId
         ? await axios.put(
-            `http://localhost:5000/api/cars/${editingCarId}`,
+            `https://carmarket-backend-966q.onrender.com/api/cars/${editingCarId}`,
             payload
           )
         : await axios.post(
-            "http://localhost:5000/api/cars",
+            "https://carmarket-backend-966q.onrender.com/api/cars",
             payload
           );
 
@@ -315,7 +315,7 @@ function AdminDashboard() {
       setDeletingCarId(car._id);
 
       const response = await axios.delete(
-        `http://localhost:5000/api/cars/${car._id}`
+        `https://carmarket-backend-966q.onrender.com/api/cars/${car._id}`
       );
 
       if (response.data.success) {
@@ -348,7 +348,7 @@ function AdminDashboard() {
       setUpdatingCarStatusId(car._id);
 
       const response = await axios.patch(
-        `http://localhost:5000/api/cars/${car._id}/status`,
+        `https://carmarket-backend-966q.onrender.com/api/cars/${car._id}/status`,
         {
           status: newStatus,
         }
@@ -406,7 +406,7 @@ function AdminDashboard() {
       setUpdatingId(requestId);
 
       const response = await axios.patch(
-        `http://localhost:5000/api/purchase-requests/${requestId}/status`,
+        `https://carmarket-backend-966q.onrender.com/api/purchase-requests/${requestId}/status`,
         {
           status: newStatus,
         }
@@ -462,7 +462,7 @@ function AdminDashboard() {
       setDeletingId(requestId);
 
       const response = await axios.delete(
-        `http://localhost:5000/api/purchase-requests/${requestId}`
+        `https://carmarket-backend-966q.onrender.com/api/purchase-requests/${requestId}`
       );
 
       if (response.data.success) {
@@ -500,7 +500,7 @@ function AdminDashboard() {
       setSellUpdatingId(requestId);
 
       const response = await axios.patch(
-        `http://localhost:5000/api/sell-cars/${requestId}/status`,
+        `https://carmarket-backend-966q.onrender.com/api/sell-cars/${requestId}/status`,
         {
           status: newStatus,
         }
@@ -559,7 +559,7 @@ function AdminDashboard() {
       setSellDeletingId(requestId);
 
       const response = await axios.delete(
-        `http://localhost:5000/api/sell-cars/${requestId}`
+        `https://carmarket-backend-966q.onrender.com/api/sell-cars/${requestId}`
       );
 
       if (response.data.success) {

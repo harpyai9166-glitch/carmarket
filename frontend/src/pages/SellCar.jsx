@@ -46,7 +46,7 @@ function SellCar() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/sell-cars",
+        "https://carmarket-backend-966q.onrender.com/api/sell-cars",
         {
           name: formData.name,
           mobile: formData.mobile,
