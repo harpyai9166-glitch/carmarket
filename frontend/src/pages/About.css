@@ -1,0 +1,252 @@
+.about-page {
+  background: #f7f8fa;
+  color: #071936;
+}
+
+/* HERO */
+
+.about-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    linear-gradient(
+      rgba(5, 10, 20, 0.88),
+      rgba(5, 10, 20, 0.88)
+    ),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80")
+    center / cover;
+}
+
+.about-hero-content {
+  max-width: 850px;
+}
+
+.about-small-title,
+.about-label {
+  color: #ff3b3b;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.about-hero h1 {
+  color: white;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 800;
+}
+
+.about-hero h1 span {
+  color: #ff3b3b;
+}
+
+.about-hero p:last-child {
+  color: #d8dde6;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 22px;
+}
+
+/* INTRO */
+
+.about-intro {
+  max-width: 1180px;
+  margin: auto;
+  padding: 90px 30px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-intro-content h2,
+.about-section-heading h2,
+.about-mission h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 0 0 22px;
+}
+
+.about-intro-content h2 span,
+.about-section-heading h2 span,
+.about-mission h2 span {
+  color: #ff3b3b;
+}
+
+.about-intro-content > p:not(.about-label) {
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* STATS */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.about-stat-card {
+  background: white;
+  border: 1px solid #e3e7ed;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.about-stat-card strong {
+  display: block;
+  color: #ff3b3b;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.about-stat-card span {
+  color: #667085;
+  font-size: 14px;
+}
+
+/* FEATURES */
+
+.about-features {
+  background: white;
+  padding: 90px 30px;
+}
+
+.about-section-heading {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-section-heading > p:last-child {
+  color: #667085;
+  font-size: 16px;
+}
+
+.about-feature-grid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-feature-card {
+  padding: 30px 24px;
+  border: 1px solid #e3e7ed;
+  border-radius: 18px;
+  background: #fff;
+  transition: 0.25s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.about-feature-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff1f1;
+  border-radius: 14px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.about-feature-card h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.about-feature-card p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* MISSION */
+
+.about-mission {
+  max-width: 1180px;
+  margin: auto;
+  padding: 90px 30px;
+  text-align: center;
+}
+
+.about-mission > div {
+  background: #071936;
+  border-radius: 24px;
+  padding: 70px 30px;
+}
+
+.about-mission h2 {
+  color: white;
+}
+
+.about-mission p:not(.about-label) {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: #c8d0dc;
+  line-height: 1.8;
+}
+
+.about-mission button {
+  border: none;
+  background: #ff3b3b;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.about-mission button:hover {
+  background: #e83232;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 350px;
+  }
+
+  .about-intro-content h2,
+  .about-section-heading h2,
+  .about-mission h2 {
+    font-size: 32px;
+  }
+
+  .about-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

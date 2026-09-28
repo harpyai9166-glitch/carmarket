@@ -1,0 +1,1002 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  background: #f6f7f9;
+  color: #111827;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.home {
+  min-height: 100vh;
+  background: #f6f7f9;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  height: 82px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  border-bottom: 1px solid #eeeeee;
+
+  position: relative;
+  z-index: 20;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #ef3b38;
+}
+
+/* NAV LINKS */
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-left: auto;
+  margin-right: 45px;
+}
+
+.navbar nav a {
+  position: relative;
+
+  text-decoration: none;
+  color: #172033;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  padding: 31px 0;
+
+  transition: color 0.25s ease;
+}
+
+.navbar nav a:hover {
+  color: #ef3b38;
+}
+
+/* ACTIVE LINK */
+
+.navbar nav a.active {
+  color: #ef3b38;
+}
+
+.navbar nav a.active::after {
+  content: "";
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #ef3b38;
+  border-radius: 4px 4px 0 0;
+}
+
+/* NAV ACTIONS */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.location-btn {
+  border: none;
+  background: transparent;
+
+  color: #172033;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  padding: 11px 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.location-btn:hover {
+  color: #ef3b38;
+}
+
+.login-btn {
+  height: 46px;
+
+  padding: 0 20px;
+
+  background: white;
+
+  border: 1px solid #d9dde5;
+  border-radius: 8px;
+
+  color: #172033;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  border-color: #ef3b38;
+  color: #ef3b38;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 7% 110px;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.86) 0%,
+      rgba(0, 0, 0, 0.68) 45%,
+      rgba(0, 0, 0, 0.48) 100%
+    ),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2200&q=90");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* Extra dark bottom gradient */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: auto 0 0 0;
+
+  height: 170px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.45)
+  );
+
+  pointer-events: none;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: white;
+}
+
+/* SMALL HEADING */
+
+.small-heading {
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* HERO TITLE */
+
+.hero h1 {
+  margin: 0 auto 22px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  line-height: 1.04;
+
+  font-weight: 800;
+
+  letter-spacing: -2.5px;
+
+  text-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.65),
+    0 8px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* RED TITLE */
+
+.hero h1 span {
+  color: #ff4743 !important;
+
+  display: inline-block;
+
+  margin-left: 8px;
+}
+
+/* HERO DESCRIPTION */
+
+.hero-text {
+  max-width: 720px;
+
+  margin: 0 auto 40px;
+
+  color: rgba(255, 255, 255, 0.94) !important;
+
+  font-size: 18px;
+  line-height: 1.65;
+
+  font-weight: 400;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+  width: 100%;
+  max-width: 1080px;
+
+  margin: 0 auto;
+
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 16px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr
+    auto;
+
+  gap: 14px;
+
+  align-items: end;
+
+  text-align: left;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.28),
+    0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SEARCH FIELD */
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.search-field label {
+  padding-left: 3px;
+
+  color: #596579;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* INPUT + SELECT */
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  height: 54px;
+
+  padding: 0 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #d9dee7;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #172033;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-field input::placeholder {
+  color: #8b94a3;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  border-color: #ef3b38;
+
+  box-shadow:
+    0 0 0 3px rgba(239, 59, 56, 0.1);
+}
+
+/* SELECT */
+
+.search-field select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+/* SEARCH BUTTON */
+
+.search-btn {
+  height: 54px;
+
+  padding: 0 30px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #ef3b38;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(239, 59, 56, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #d93230;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(239, 59, 56, 0.35);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   POPULAR CARS SECTION
+========================================================= */
+
+.popular-section {
+  width: 100%;
+
+  padding: 85px 7% 90px;
+
+  background: #f6f7f9;
+}
+
+.section-heading {
+  max-width: 1200px;
+
+  margin: 0 auto 38px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-heading p {
+  margin-bottom: 7px;
+
+  color: #ef3b38;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.section-heading h2 {
+  color: #101828;
+
+  font-size: 34px;
+  font-weight: 750;
+
+  letter-spacing: -0.8px;
+}
+
+.view-all {
+  border: none;
+
+  background: transparent;
+
+  color: #ef3b38;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  padding: 8px 0;
+
+  transition: 0.2s ease;
+}
+
+.view-all:hover {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CAR GRID
+========================================================= */
+
+.car-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 26px;
+}
+
+
+/* =========================================================
+   CAR CARD
+========================================================= */
+
+.car-card {
+  position: relative;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 18px rgba(16, 24, 40, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(16, 24, 40, 0.12);
+}
+
+
+/* =========================================================
+   CAR IMAGE
+========================================================= */
+
+.car-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 230px;
+
+  overflow: hidden;
+
+  background: #e9edf2;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-image img {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   FAVORITE BUTTON
+========================================================= */
+
+.favorite-btn {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #1f2937;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.2s ease;
+}
+
+.favorite-btn:hover {
+  color: #ef3b38;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CAR INFO
+========================================================= */
+
+.car-info {
+  padding: 21px;
+}
+
+.car-info h3 {
+  margin-bottom: 8px;
+
+  color: #172033;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.price {
+  margin-bottom: 15px;
+
+  color: #111827;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CAR DETAILS
+========================================================= */
+
+.car-details {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 19px;
+
+  color: #697386;
+
+  font-size: 13px;
+}
+
+.car-details span {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DETAILS BUTTON
+========================================================= */
+
+.details-btn {
+  width: 100%;
+  height: 44px;
+
+  background: #ffffff;
+
+  border: 1px solid #ef3b38;
+
+  border-radius: 8px;
+
+  color: #ef3b38;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.details-btn:hover {
+  background: #ef3b38;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+  width: 100%;
+
+  padding: 70px 7%;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e8eaf0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px;
+}
+
+.feature {
+  text-align: center;
+
+  padding: 10px;
+}
+
+.feature-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff0ef;
+
+  color: #ef3b38;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.feature h3 {
+  margin-bottom: 8px;
+
+  color: #172033;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.feature p {
+  max-width: 220px;
+
+  margin: 0 auto;
+
+  color: #70798a;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .navbar nav {
+    gap: 25px;
+    margin-right: 20px;
+  }
+
+  .hero {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .search-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  .popular-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: 70px;
+
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 5px;
+  }
+
+  .location-btn {
+    display: none;
+  }
+
+  .login-btn {
+    height: 40px;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 650px;
+
+    padding: 65px 20px 80px;
+
+    background-position: center;
+  }
+
+  .small-heading {
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 17px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 18px;
+  }
+
+  .hero h1 span {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 4px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+  }
+
+  /* SEARCH */
+
+  .search-box {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 17px;
+
+    border-radius: 13px;
+  }
+
+  .search-field input,
+  .search-field select,
+  .search-btn {
+    height: 50px;
+  }
+
+  /* POPULAR */
+
+  .popular-section {
+    padding: 55px 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .view-all {
+    font-size: 12px;
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .car-image {
+    height: 220px;
+  }
+
+  /* FEATURES */
+
+  .features {
+    grid-template-columns: 1fr;
+
+    padding: 50px 20px;
+
+    gap: 30px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .small-heading {
+    font-size: 10px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .view-all {
+    align-self: flex-start;
+  }
+}

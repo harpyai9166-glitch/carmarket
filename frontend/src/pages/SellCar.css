@@ -1,0 +1,853 @@
+/* =========================================================
+   SELL CAR PAGE
+========================================================= */
+
+.sell-car-page {
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #111827;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.sell-navbar {
+  height: 76px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.sell-logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #111827;
+}
+
+.sell-logo span {
+  color: #e63946;
+}
+
+.sell-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.sell-nav-links a {
+  position: relative;
+
+  color: #374151;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 650;
+
+  padding: 28px 0;
+
+  transition: all 0.25s ease;
+}
+
+.sell-nav-links a:hover {
+  color: #e63946;
+}
+
+.sell-nav-links a.active {
+  color: #e63946;
+}
+
+.sell-nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+
+  height: 3px;
+  border-radius: 10px;
+
+  background: #e63946;
+}
+
+.sell-location {
+  background: #f9fafb;
+
+  padding: 10px 15px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  color: #374151;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sell-hero {
+  position: relative;
+
+  min-height: 340px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 65px 7%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      120deg,
+      #111827 0%,
+      #1f2937 55%,
+      #111827 100%
+    );
+}
+
+
+/* Decorative circles */
+
+.sell-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  right: -120px;
+  top: -180px;
+
+  border: 70px solid rgba(230, 57, 70, 0.08);
+}
+
+.sell-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  right: 15%;
+  bottom: -180px;
+
+  background: rgba(230, 57, 70, 0.06);
+}
+
+.sell-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+.sell-small-title {
+  margin: 0 0 14px;
+
+  color: #ef4444;
+
+  font-size: 13px;
+  font-weight: 850;
+
+  letter-spacing: 2.5px;
+}
+
+.sell-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  line-height: 1.08;
+
+  font-weight: 850;
+
+  letter-spacing: -2.5px;
+}
+
+.sell-hero h1 span {
+  color: #ef4444;
+}
+
+.sell-hero p:not(.sell-small-title) {
+  margin-top: 22px;
+
+  max-width: 690px;
+
+  color: #d1d5db;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.sell-container {
+  width: min(1380px, 92%);
+
+  margin: 0 auto;
+
+  padding: 85px 0 100px;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 75px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+========================================================= */
+
+.sell-info {
+  padding-top: 18px;
+}
+
+.sell-info h2 {
+  margin: 0;
+
+  font-size: 38px;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.3px;
+
+  color: #111827;
+}
+
+.sell-info-text {
+  margin: 16px 0 45px;
+
+  color: #6b7280;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  max-width: 520px;
+}
+
+
+/* Benefits */
+
+.sell-benefit {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 20px 0;
+
+  margin-bottom: 8px;
+
+  transition: transform 0.25s ease;
+}
+
+.sell-benefit:hover {
+  transform: translateX(6px);
+}
+
+.benefit-icon {
+  width: 62px;
+  height: 62px;
+
+  min-width: 62px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 8px 25px rgba(17, 24, 39, 0.07);
+}
+
+.sell-benefit h3 {
+  margin: 3px 0 8px;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+.sell-benefit p {
+  margin: 0;
+
+  max-width: 440px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.sell-form-card {
+  position: relative;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 24px;
+
+  padding: 42px;
+
+  box-shadow:
+    0 25px 70px rgba(17, 24, 39, 0.10);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sell-form-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 30px 80px rgba(17, 24, 39, 0.13);
+}
+
+
+/* Top red line */
+
+.sell-form-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 5px;
+
+  border-radius: 24px 24px 0 0;
+
+  background: #e63946;
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.sell-form-header {
+  margin-bottom: 34px;
+}
+
+.sell-form-header p {
+  margin: 0 0 8px;
+
+  color: #e63946;
+
+  font-size: 12px;
+
+  font-weight: 850;
+
+  letter-spacing: 2px;
+}
+
+.sell-form-header h2 {
+  margin: 0 0 9px;
+
+  font-size: 30px;
+
+  font-weight: 850;
+
+  letter-spacing: -0.8px;
+
+  color: #111827;
+}
+
+.sell-form-header span {
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM SECTION TITLE
+========================================================= */
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 32px 0 20px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 850;
+}
+
+.form-section-title::before {
+  content: "";
+
+  width: 5px;
+  height: 19px;
+
+  border-radius: 10px;
+
+  background: #e63946;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 750;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  background: #fafafa;
+
+  border: 1px solid #d9dde3;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  color: #111827;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #b8bec7;
+
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+
+  border-color: #e63946;
+
+  box-shadow:
+    0 0 0 4px rgba(230, 57, 70, 0.08);
+}
+
+.form-group textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.sell-submit-btn {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 16px 22px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e63946,
+      #d62839
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  box-shadow:
+    0 10px 25px rgba(230, 57, 70, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sell-submit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(230, 57, 70, 0.30);
+}
+
+.sell-submit-btn:active {
+  transform: translateY(0);
+}
+
+.sell-submit-btn span {
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   FORM NOTE
+========================================================= */
+
+.form-note {
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   SUCCESS SCREEN
+========================================================= */
+
+.sell-success {
+  min-height: 600px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.success-icon {
+  width: 86px;
+  height: 86px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  font-size: 42px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 15px 35px rgba(22, 163, 74, 0.15);
+
+  margin-bottom: 25px;
+}
+
+.sell-success h2 {
+  margin: 0 0 12px;
+
+  font-size: 32px;
+
+  font-weight: 850;
+}
+
+.sell-success p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.sell-again-btn {
+  margin-top: 25px;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.sell-again-btn:hover {
+  background: #000000;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .sell-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    width: min(850px, 92%);
+  }
+
+  .sell-info {
+    padding-top: 0;
+  }
+
+  .sell-info-text {
+    max-width: 700px;
+  }
+
+  .sell-benefit {
+    max-width: 700px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .sell-navbar {
+    height: auto;
+
+    min-height: 68px;
+
+    padding: 12px 20px;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .sell-logo {
+    font-size: 23px;
+  }
+
+  .sell-nav-links {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  .sell-nav-links a {
+    padding: 8px 0;
+
+    font-size: 12px;
+  }
+
+  .sell-nav-links a.active::after {
+    bottom: 0;
+  }
+
+  .sell-location {
+    font-size: 12px;
+
+    padding: 8px 12px;
+  }
+
+  .sell-hero {
+    min-height: 300px;
+
+    padding: 55px 25px;
+  }
+
+  .sell-hero h1 {
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .sell-hero p:not(.sell-small-title) {
+    font-size: 15px;
+  }
+
+  .sell-container {
+    padding: 55px 0 70px;
+  }
+
+  .sell-info h2 {
+    font-size: 30px;
+  }
+
+  .sell-form-card {
+    padding: 28px 22px;
+
+    border-radius: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .sell-form-header h2 {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .sell-nav-links {
+    gap: 12px;
+  }
+
+  .sell-nav-links a {
+    font-size: 11px;
+  }
+
+  .sell-hero h1 {
+    font-size: 34px;
+  }
+
+  .sell-container {
+    width: 94%;
+  }
+
+  .sell-form-card {
+    padding: 25px 18px;
+  }
+}
