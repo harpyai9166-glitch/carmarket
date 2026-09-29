@@ -1,0 +1,146 @@
+.register-page {
+  min-height: 100vh;
+  background: #f7f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 42px;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.register-logo {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+.register-logo span {
+  color: #ef3b3b;
+}
+
+.register-small-title {
+  text-align: center;
+  color: #ef3b3b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.register-card h1 {
+  text-align: center;
+  color: #111827;
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.register-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.register-error,
+.register-success {
+  padding: 12px 14px;
+  border-radius: 9px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.register-error {
+  background: #fff1f1;
+  color: #d92d20;
+  border: 1px solid #ffd2d2;
+}
+
+.register-success {
+  background: #ecfdf3;
+  color: #027a48;
+  border: 1px solid #abefc6;
+}
+
+.register-form-group {
+  margin-bottom: 16px;
+}
+
+.register-form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 7px;
+}
+
+.register-form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d9dde5;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.register-form-group input:focus {
+  border-color: #ef3b3b;
+  box-shadow: 0 0 0 3px rgba(239, 59, 59, 0.08);
+}
+
+.register-submit-btn {
+  width: 100%;
+  border: none;
+  background: #ef3b3b;
+  color: white;
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.register-submit-btn:hover {
+  background: #d92f2f;
+}
+
+.register-login-text {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 22px;
+}
+
+.register-login-text a {
+  color: #ef3b3b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-home-btn {
+  display: block;
+  margin: 22px auto 0;
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.register-home-btn:hover {
+  color: #ef3b3b;
+}
